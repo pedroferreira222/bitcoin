@@ -1,0 +1,95 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 15px 0;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    margin: 0 150px;
+    transition: width 0.3s, height 0.3s, box-shadow 0.3s; /* Adicionando transições */
+}
+
+.logo:hover {
+    width: 120px; /* Expandindo a largura ao passar o mouse */
+    height: 120px; /* Expandindo a altura ao passar o mouse */
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5)); /* Adicionando sombra ao passar o mouse */
+
+}
+
+.menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-left, .menu-right {
+    display: flex;
+    gap: 15px;
+}
+
+.menu a {
+    color: #ffe600;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #ffee00;
+    color: #1a1a1a;
+}
+
+.ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    background-color: #fbff00;
+    color: #202020;
+}
+
+.ticker {
+    display: flex;
+    width: 200%; /* Ensure ticker spans full width and more */
+    animation: ticker 60s linear infinite; /* Slower animation */
+}
+
+.ticker__item {
+    flex: 0 0 auto;
+    padding: 4px 60px;
+    font-size: 1em;
+    white-space: nowrap;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-30%); /* Smooth continuous loop */
+    }
+}
+
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px; /* Espaço à esquerda do texto */
+    vertical-align: middle; /* Centraliza verticalmente */
+}
